@@ -1,9 +1,11 @@
 <div class="container-fluid">
   <div class="jumbotron">
-    <h1 id="sign-name" class="text-center"><a href="" id="sign-glow">Eat Da' Burgers!</a></h1>
+    <h1 id="sign-name" class="text-center"><i class="fas fa-hamburger"></i><a href="" id="sign-glow"> Eat Da Burgers! </a><i class="fas fa-hamburger"></i></h1>
   </div>
+
   <div class="row">
-    <div class="col-xs-5 text-center">
+    <div class="col-md-2"></div>
+    <div class="col-md-4 text-center">
       <h2 id="ready-to-eat">Hot and Ready to Eat</h2>
       {{#each burger}}
         {{#unless this.devoured}}
@@ -16,22 +18,8 @@
           {{/unless}}
           {{/each}}
     </div>
-    <div class="col-xs-2 text-center" id="add-form">
-    <form action="/add" method="POST">
-      <div class="form-group">
-        <label for="new-burger" class="control-label">Create A New Burger</label>
-        <input class="form-control" type="text" id="new-burger" name="name" value="" placeholder="Add New Burger Name">
-        <button type="submit" class="btn btn-warning btn-block" id="add-btn">Add Burger</button>
-      </div>
-    </form>
-    {{#if alert}}
-    <p style="color: red">{{alert}}</p>
-    {{/if}}
-    <div>
-    <h3 id="total">Total Burgers Devoured: {{total}}</h3>
-  </div>
-</div>
-  <div class="col-xs-5 text-center">
+    
+  <div class="col-md-4 text-center">
     <h2 id="ready-to-eat">Burger Heaven</h2>
     {{#each burger}}
       {{#if this.devoured}}
@@ -43,6 +31,28 @@
          </form>
         {{/if}}
         {{/each}}
-  </div>
-  </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 text-center" id="add-form">
+            <form action="/add" method="POST">
+        <div class="form-group">
+            <label for="new-burger" class="control-label">Create A New Burger</label>
+            <input class="form-control" type="text" id="new-burger" name="name" value="" placeholder="Add New Burger Name">
+            <button type="submit" class="btn btn-warning btn-block" id="add-btn">Add Burger</button>
+        </div>
+        </form>
+            {{#if alert}}
+            <p style="color: red">{{alert}}</p>
+            {{/if}}
+            <div>
+                <h3 id="total">Total Burgers Devoured: {{total}}</h3>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
 </div>
