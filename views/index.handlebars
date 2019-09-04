@@ -12,8 +12,8 @@
             <form class="form-inline" action="/{{this.id}}?_method=PUT" method="POST">
               <label id="ready-items">{{this.burger_name}}</label>
               <input type="hidden" name="devoured" value={{this.devoured}}>
-             <button type="submit" class="btn btn-sm btn-danger" id="eat-btn">
-               <span class="glyphicon glyphicon-triangle-left"></span> Devour!</button>
+              <button type="submit" class="btn btn-sm btn-danger" id="eat-btn">
+              <i class="fas fa-hamburger"></i> Devour!</button>
            </form>
           {{/unless}}
           {{/each}}
@@ -26,8 +26,8 @@
           <form class="form-inline" action="/{{this.id}}?_method=PUT" method="POST">
             <label id="ready-items">{{this.burger_name}}</label>
             <input type="hidden" name="devoured" value={{this.devoured}}>
-           <button type="submit" class="btn btn-sm btn-primary" id="eat-btn">
-             <span class="glyphicon glyphicon-triangle-left"></span> RE-N-CARN-ATE!</button>
+            {{!-- <button type="submit" class="btn btn-sm btn-primary" id="eat-btn">
+            <span class="glyphicon glyphicon-triangle-left"></span> RE-N-CARN-ATE!</button> --}}
          </form>
         {{/if}}
         {{/each}}
