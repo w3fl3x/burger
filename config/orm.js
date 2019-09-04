@@ -23,7 +23,19 @@ var orm = {
         });
     },
 
-    
+    updateOne: function(table, id, devoured, cb) {
+        if (parseInt(devoured) === 0) {
+            var queryString = 'UPDATE ?? SET devoured=true, count_eaten=count_eaten + 1 WHERE id=?';
+        } else {
+            queryString = 'UPDATE ?? SET devoured=false WHERE id=?';
+        }
+        connection.query(queryString, [table, id], function(err, data) {
+            if (err) {
+                throw err;
+            }
+            cb(data);
+        });
+    }
 };
 
 module.exports = orm;
