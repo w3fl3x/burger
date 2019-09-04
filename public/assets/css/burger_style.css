@@ -1,0 +1,11 @@
+body {
+    background-image: url('/public/assets/images/food.png');
+}
+
+#sign-glow {
+    color: #009ADA;
+}
+
+.fas {
+    color: yellow;
+}
