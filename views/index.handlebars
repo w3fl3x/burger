@@ -11,7 +11,7 @@
         {{#unless this.devoured}}
             <form class="form-inline" action="/{{this.id}}?_method=PUT" method="POST">
               <label id="ready-items">{{this.burger_name}}</label>
-              <input type="hidden" name="devoured" value={{this.devoured}}>
+              <input type="hidden" name="devoured" value={{this.devoured}}>&nbsp
               <button type="submit" class="btn btn-sm btn-danger" id="eat-btn">
               <i class="fas fa-hamburger"></i> Devour!</button>
            </form>
