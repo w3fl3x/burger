@@ -1,5 +1,6 @@
 body {
     background-image: url('/public/assets/images/food.png');
+    background-color: blue;
 }
 
 #sign-glow {

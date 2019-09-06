@@ -49,7 +49,7 @@ router.post('/add', function(req, res) {
     };
 });
 
-router.put('/:id', function(req, res) {
+router.post('/:id', function(req, res) {
     burgers.update(req.params.id, req.body.devoured, function(result) {
         console.log(result);
         res.redirect('/');

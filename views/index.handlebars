@@ -9,7 +9,7 @@
       <h2 id="ready-to-eat">Hot and Ready to Eat</h2>
       {{#each burger}}
         {{#unless this.devoured}}
-            <form class="form-inline" action="/{{this.id}}?_method=PUT" method="POST">
+            <form class="form-inline" action="/{{this.id}}" method="POST">
               <label id="ready-items">{{this.burger_name}}</label>
               <input type="hidden" name="devoured" value={{this.devoured}}>&nbsp
               <button type="submit" class="btn btn-sm btn-danger" id="eat-btn">
