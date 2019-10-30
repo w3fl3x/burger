@@ -1,5 +1,6 @@
 body {
-    background-image: url('/public/assets/images/food.png');
+    background-image: url('../images/food.png');
+    background-size: cover;
     background-color: blue;
 }
 
